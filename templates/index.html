@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+    <meta charset="UTF-8">
+    <title>House Prediction</title>
+
+  <body>
+<div class="login">
+    <h1>House Prediction Analysis</h1>
+      <form action = "{{ url_for('predict')}}" method = "POST">
+         <p>Avg. Area Income <input type = "number" name = "income" /></p>
+         <p>Avg. Area House Age <input type = "number" name = "age" /></p>
+         <p>Avg. Area Number of Rooms <input type = "number" name = "rooms" /></p>
+         <p>Avg. Area Number of Bedrooms <input type ="number" name = "Bedrooms" /></p>
+          <p>Area Population <input type ="number" name = "population" /></p>
+         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+      </form>
+
+    <br>
+    {{prediction}}
+    </br>
+
+  </div>
+
+
+   </body>
+</html>
